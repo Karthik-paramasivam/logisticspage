@@ -204,19 +204,43 @@ html {
 
 .testimonialresponsive-div {
   width: 95%;
-  height: 250px; /* Default height for large devices */
+  height: 420px; /* Default height for large devices */
+}
+
+@media (max-width: 1024px) {
+  /* For medium devices */
+  .testimonialresponsive-div {
+    height: 530px;
+  }
 }
 
 @media (max-width: 768px) {
   /* For medium devices */
   .testimonialresponsive-div {
-    height: 340px;
+    height: 390px;
   }
 }
 
 @media (max-width: 576px) {
   /* For small devices */
   .testimonialresponsive-div {
-    height: 370px;
+    height: 465px;
   }
+  
+}
+
+@media (max-width: 376px) {
+  /* For small devices */
+  .testimonialresponsive-div {
+    height: 490px;
+  }
+  
+}
+
+@media (max-width: 320px) {
+  /* For small devices */
+  .testimonialresponsive-div {
+    height: 590px;
+  }
+  
 }

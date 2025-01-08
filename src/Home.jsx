@@ -8,7 +8,12 @@ import { motion } from "framer-motion"; // Import framer-motion for animations
 import "./App.css";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Logo2 from "./Images/Logo2.png";
+import CharteredImage from "./Images/CharteredImage.png";
+import CILT2Image from "./Images/CILT2Image.jpg";
+import CILT3Image from "./Images/CILT3Image.jpg";
+import CILT5Image from "./Images/CILT5Image.jpg";
+import CILT6Image from "./Images/CILT6Image.jpg";
+
 import Welcome from "./Images/Welcome.jpg";
 import Footerlogo from "./Images/Footerlogo.png";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -268,9 +273,9 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
     cssEase: "linear",
     autoplaySpeed: 4000,
     // initialSlide: 0,
@@ -279,8 +284,8 @@ export default function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
           speed: 300,
@@ -311,7 +316,7 @@ export default function Home() {
       <style>{styl}</style>
 
       <div className="container-fluid">
-      <div className="container-fluid m-0 p-0">
+        <div className="container-fluid m-0 p-0">
           <div className="row">
             <div
               className="col-12 dynamic-height"
@@ -337,7 +342,7 @@ export default function Home() {
                 }}
               ></div>
               <div
-                className="row mt-5 rounded-5 m-auto p-1 terminalresponsive-container"
+                className="row mt-5 rounded-5 m-auto p-2 terminalresponsive-container"
                 // style={{
                 //   backdropFilter: "0px",
                 //   background: "rgba(87, 87, 87, 0.4)",
@@ -346,29 +351,33 @@ export default function Home() {
               >
                 {/* First Column with Animation */}
                 <motion.div
-                  className="col-12 col-lg-6 mt-5 m-auto"
+                  className="col-12 col-lg-6 col-xl-6 col-xxl-6 mt-5 m-auto"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1.5 }}
                 >
                   <h1
-                    className="text-white"
+                    className="text-white mt-xl-5 mt-xxl-5"
                     style={{ fontSize: "60px", fontWeight: "700" }}
                   >
-                   Discover Your<br />Potential in <span style={{color:"rgb(243,188,68)"}}>Logistics</span>
-
+                    Discover Your
+                    <br />
+                    Potential in{" "}
+                    <span style={{ color: "rgb(243,188,68)" }}>Logistics</span>
                   </h1>
-                  <h3 className="text-white fw-light" >
-                  Uncover new career opportunities with logistics and transport training courses.
-
-
+                  <h3 className="text-white fw-light">
+                    Uncover new career opportunities with logistics and
+                    transport training courses.
                   </h3>
                 </motion.div>
 
                 {/* Second Column with Animation */}
                 <motion.div
-                  className="col-12 col-lg-5 rounded-4 mt-3 m-auto mt-lg-1 mb-lg-1"
-                  style={{ backgroundColor: "rgb(243, 188, 68)", padding: "20px" }}
+                  className="col-12 col-lg-6 col-xl-6 col-xxl-5 rounded-4 mt-3 m-auto mt-lg-1 mb-lg-1 "
+                  style={{
+                    backgroundColor: "rgb(243, 188, 68)",
+                    padding: "20px",
+                  }}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 2 }}
@@ -463,25 +472,25 @@ export default function Home() {
                     </Form.Item>
 
                     <Form.Item
-        label="CILT Courses"
-        name="courses"
-        className="form-item text-white"
-        rules={[
-          {
-            required: true,
-            message: "Please select your course!",
-          },
-        ]}
-      >
-        <Select placeholder="Select your course">
-          <Option value="cilt_level_1">CILT Level 1</Option>
-          <Option value="cilt_level_2">CILT Level 2</Option>
-          <Option value="cilt_level_3">CILT Level 3</Option>
-          <Option value="cilt_level_4">CILT Level 4</Option>
-          <Option value="cilt_level_5">CILT Level 5</Option>
-          <Option value="cilt_level_6">CILT Level 6</Option>
-        </Select>
-      </Form.Item>
+                      label="CILT Courses"
+                      name="courses"
+                      className="form-item text-white"
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please select your course!",
+                        },
+                      ]}
+                    >
+                      <Select placeholder="Select your course">
+                        {/* <Option value="cilt_level_1">CILT Level 1</Option> */}
+                        <Option value="cilt_level_2">CILT Level 2</Option>
+                        <Option value="cilt_level_3">CILT Level 3</Option>
+                        {/* <Option value="cilt_level_4">CILT Level 4</Option> */}
+                        <Option value="cilt_level_5">CILT Level 5</Option>
+                        <Option value="cilt_level_6">CILT Level 6</Option>
+                      </Select>
+                    </Form.Item>
 
                     <Form.Item>
                       <div className="d-flex justify-content-end">
@@ -507,7 +516,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container mt-5" id="coursediscription">
+        <div className="container mt-5" id="Aboutcilt">
           <div className="row border border-white m-auto">
             <div className="col-12">
               <div className="row">
@@ -523,24 +532,6 @@ export default function Home() {
                 >
                   {/* Course Description */}
                   <div className="course-text">
-                    <motion.div
-                      className={`col-12 col-lg-6 border border-white`}
-                      ref={myRef0}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: hasViewedSlide.zeroElement ? 1 : 0 }}
-                      transition={{
-                        duration: 0.8,
-                        type: "spring",
-                        stiffness: 100,
-                      }}
-                    >
-                      <img
-                        src={Logo2}
-                        alt="Logo2 Image"
-                        className="img-fluid rounded-3 mt-5 mt-lg-0 hover-scale"
-                        style={{ width: "149px" }}
-                      />
-                    </motion.div>
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: hasViewed ? 1 : 0 }}
@@ -548,9 +539,9 @@ export default function Home() {
                       className="course-title fs-3 fw-bold"
                     >
                       <h1 className="text-start">
-                        <span className="fw-bold  ">Course </span>
-                        <span className="fw-bold  text-primary">
-                          Description
+                        <span className="fw-bold  ">About </span>
+                        <span className="fw-bold" style={{ color: "#d59911" }}>
+                          CILT
                         </span>
                       </h1>{" "}
                     </motion.p>
@@ -560,11 +551,12 @@ export default function Home() {
                       transition={{ delay: 0.7, duration: 1 }}
                       style={{ textAlign: "justify" }}
                     >
-                      The Passenger Ground Services course at WingsWay Training
-                      Institute provides deep insight into various subjects,
-                      including airport operations, reservation systems,
-                      security protocols, and the evolving landscape of the
-                      aviation sector.
+                      The Chartered Institute of Logistics and Transport (CILT,
+                      UK) stands as the global leader in advocating for supply
+                      chain, logistics, and transport. CILT is dedicated to
+                      crafting effective programs and setting ambitious
+                      objectives that form the cornerstone of its growth
+                      strategy, rooted in regional development.
                     </motion.p>
                     <motion.ul
                       initial={{ opacity: 0 }}
@@ -584,10 +576,10 @@ export default function Home() {
                           className="text-primary me-2 flex-shrink-0 mt-1"
                         />
                         <span>
-                          Upon completing the course, students will acquire the
-                          expertise to deliver exceptional assistance and
-                          passenger services, ground operations, and customer
-                          satisfaction within airport environments.
+                          The institute’s unwavering commitment lies in the
+                          constant enhancement of its members’ expertise by
+                          fostering the exchange of best practices and knowledge
+                          sharing.
                         </span>{" "}
                       </motion.li>
                       <motion.li
@@ -600,628 +592,345 @@ export default function Home() {
                           icon={faCircleCheck}
                           className="text-primary me-2 flex-shrink-0 mt-1"
                         />
-                        In addition, we offer guaranteed international
-                        internships, grooming sessions, CV preparation, mock
-                        interviews, job assistance, and much more.
+                        Moreover, it actively promotes participation and
+                        professional advancement across all tiers of its
+                        membership.
                       </motion.li>
                     </motion.ul>
                   </div>
                 </motion.div>
 
-                {/* <motion.div
-                  className={`col-12 col-lg-6 m-auto border border-white text-center`}
-                  ref={myRef0}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: hasViewedSlide.zeroElement ? 1 : 0 }}
-                  transition={{
-                    duration: 0.8,
-                    type: "spring",
-                    stiffness: 100,
-                  }}
-                >
-                  <img
-                    src={Logo2}
-                    alt="Logo2 Image"
-                    className="img-fluid rounded-3 mt-5 mt-lg-0 hover-scale"
-                    style={{ width: "209px" }}
-                  />
-                </motion.div> */}
-
                 <div className="col-12 col-lg-6 ">
-                  <img
-                    src={Welcome}
-                    alt="Welcome Image"
-                    className="img-fluid rounded-3 mt-5 hover-scale"
-                  />
+                  <motion.div
+                    className={`col-12 col-lg-6 m-auto border border-white  text-center`}
+                    ref={myRef0}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: hasViewedSlide.zeroElement ? 1 : 0 }}
+                    transition={{
+                      duration: 0.8,
+                      type: "spring",
+                      stiffness: 100,
+                    }}
+                  >
+                    <img
+                      src={CharteredImage}
+                      alt="CharteredImage"
+                      className="img-fluid rounded-3 mt-0 mt-lg-0 hover-scale"
+                    />
+                  </motion.div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container mt-5" id="banner">
+        <div className="container-mt-5" id="ourcourses">
+          <div className="row">
+            <div className="col-12 ">
+              <h1 className="text-center mt-lg-5">
+                <span className="fw-bold "> Our </span>
+                <span className="fw-bold" style={{ color: "#d59911" }}>
+                  {" "}
+                  Courses
+                </span>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mt-3">
           <div
-            className={`row slide-in-left  ${
+            className={`row shadow rounded-4   slide-in-left  ${
               hasViewedSlide.myElement ? "animate-slide-in" : ""
             }`}
             ref={myRef1}
           >
-            {/* <div className="col-12 mt-3 mt-lg-0 text-center">
+            <div className="col-12 col-lg-6 col-xl-6 hover-scale2 text-center mt-3 mb-3 mt-lg-5  mt-xl-5 mt-xxl-3 ">
               <img
-                src={WingsBanner}
-                alt="WingsBanner Image"
-                className="img-fluid rounded-3 shadow w-100 w-lg-75"
+                src={CILT2Image}
+                alt="CILT-Level 2"
+                className="img-fluid rounded-3 mt-lg-0 mt-xl-0 mt-xxl-0 m-auto"
               />
-            </div> */}
-            <div className="col-12 mt-3 mt-lg-0 text-center">
+            </div>
+
+            <div className="col-12 col-lg-6 col-xl-6 col-xxl-5 mt-2 ms-xxl-2 border border-white mb-3">
+              <h2 className="text-center mt-lg-2 mt-xl-3">
+                <span className="fw-bold  ">CILT </span>
+                <span className="fw-bold  text-primary">Level 2</span>
+              </h2>
+              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                <li className="mt-1 d-flex align-items-start ">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  The CILT Level 2 Introductory Certificate course offered by
+                  the Chartered Institute of Logistics and Transport (CILT, UK)
+                  is the ideal choice for anyone looking to start their career
+                  in the Logistics industry, catering to both frontline and
+                  supervisory staff.
+                </li>
+                <li className="mt-1 d-flex align-items-start ">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  CILT enjoys global recognition as an authority in logistics
+                  and transport.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  While it is open to all, prior familiarity with logistics and
+                  transport operations and industry fundamentals is beneficial.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  The course covers essential topics, including logistics,
+                  transport operations, and industry principles.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  Apart from course training, WingsWay Training Institute
+                  provides thorough exam preparation support for this course as
+                  well.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2  flex-shrink-0 mt-1"
+                  />
+                  Additionally, we offer a range of benefits, such as
+                  scholarships, interest-free EMI options, and internship
+                  opportunities.
+                </li>
+              </ul>
+              <div className="text-center">
+                <Button
+                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  style={{ background: "#0d278e" }}
+                  onClick={() => {
+                    window.location.href = "#"; // Simulate href="#" behavior
+                  }}
+                >
+                  Enquire Now
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container mt-5">
+          <div
+            className={`row shadow rounded-4  slide-in-left  ${
+              hasViewedSlide.secondElement ? "animate-enquire" : ""
+            }`}
+            ref={myRef2}
+          >
+            <div className="col-12 col-lg-6 col-xl-5 col-xxl-5 mt-2  mb-3 ms-lg-3 ms-xl-3 ms-xxl-5 mt-lg-4 mt-xl-4 mt-xxl-5 ps-xxl-4">
+              <h2 className="text-center mt-lg-2 mt-xl-5 mt-xxl-5">
+                <span className="fw-bold  ">CILT </span>
+                <span className="fw-bold  text-primary">Level 3</span>
+              </h2>
+              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
+                <li className="mt-1 d-flex align-items-start ">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  This entry-level course has been thoughtfully tailored by our
+                  expert trainers to align with local market demands while
+                  developing crucial logistics and supply chain skills.
+                </li>
+                <li className="mt-1 d-flex align-items-start ">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  Our curriculum encompasses a global perspective, exploration
+                  of shipping routes, and relevant topics, all aimed at
+                  preparing you for international job opportunities.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2 flex-shrink-0 mt-1"
+                  />
+                  At WingsWay, we go the extra mile, offering comprehensive exam
+                  preparation, scholarships, interest-free EMI options,
+                  internships, end-to-end support, and more
+                </li>
+              </ul>
+              <div className="text-center">
+                <Button
+                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  style={{ background: "#0d278e" }}
+                  onClick={() => {
+                    window.location.href = "#"; // Simulate href="#" behavior
+                  }}
+                >
+                  Enquire Now
+                </Button>
+              </div>
+            </div>
+            <div className="col-12 col-lg-5 col-xl-6 col-xxl-6 hover-scale2 text-center mt-3 mb-3 mt-lg-3  mt-xl-3 mt-xxl-3 ">
               <img
-                src={WingsBanner}
-                alt="WingsBanner Image"
-                className="img-fluid rounded-3 shadow w-100 d-lg-none" // Ensures 100% width for small and medium devices
-              />
-              <img
-                src={WingsBanner}
-                alt="WingsBanner Image"
-                className="img-fluid rounded-3 shadow w-75 d-none d-lg-inline" // Ensures 75% width for large devices and above
+                src={CILT3Image}
+                alt="CILT-Level 3"
+                className="img-fluid rounded-3 mt-lg-0 mt-xl-0 mt-xxl-0 m-auto"
               />
             </div>
           </div>
         </div>
 
-        <div className="container mt-5 border border-white " id="career">
-          {/* <div className="row "> */}
+        <div className="container mt-5">
           <div
-            className={`row rounded-4 slide-in-left   ${
-              hasViewedSlide.secondElement ? "animate-enquire" : ""
-            }`}
-            style={{ justifyContent: "center" }}
-            ref={myRef2}
-          >
-            <div className="col-12 ">
-              <h1 className="text-center mt-lg-3">
-                <span className="fw-bold ">About the</span>
-                <span className="fw-bold  text-primary"> Course</span>
-              </h1>
-            </div>
-            {/* <div className="col-12 col-lg-5 rounded-3 mt-2 mt-lg-4 rounded-3 shadow p-4 ">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Learning </span>
-                <span className="fw-bold fs-3 text-primary">Outcomes</span>
-              </p>
-              <p className="text-start ms-3">
-                You will learn the following after completing the Passenger
-                Ground Services course at WingsWay Training Institute:
-              </p>
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-4 d-flex align-items-start mt-1 ">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
-                      How Airlines and Airports Work:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Learn how airlines and airports provide passenger services
-                      like check-in and boarding.
-                    </span>
-                  </div>
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
-                      Passenger Check-In and Boarding:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Understand how passengers and their luggage are checked in
-                      and how they board the airplane, especially those with
-                      special needs.
-                    </span>
-                  </div>{" "}
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
-                      Transportation Rules:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Know the rules for transporting passengers and their
-                      baggage safely.
-                    </span>
-                  </div>{" "}
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
-                      Computer Systems for Travel:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Understand how computer systems manage reservations,
-                      flight departures, and other processes.
-                    </span>
-                  </div>{" "}
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold", whiteSpace: "nowrap" }}>
-                      Latest Passenger Service Technology:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Stay updated on the newest technology used to provide
-                      services at the airports and on flights.
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div> */}
-
-            <div className="col-12 col-lg-5 rounded-3 mt-2 mt-lg-4 rounded-3 shadow p-4 small-device-text-wrap">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3">Learning </span>
-                <span className="fw-bold fs-3 text-primary">Outcomes</span>
-              </p>
-              <p className="text-start ms-3">
-                You will learn the following after completing the Passenger
-                Ground Services course at WingsWay Training Institute:
-              </p>
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold" }}>
-                      How Airlines and Airports Work:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Learn how airlines and airports provide passenger services
-                      like check-in and boarding.
-                    </span>
-                  </div>
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold" }}>
-                      Passenger Check-In and Boarding:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Understand how passengers and their luggage are checked in
-                      and how they board the airplane, especially those with
-                      special needs.
-                    </span>
-                  </div>
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold" }}>
-                      Transportation Rules:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Know the rules for transporting passengers and their
-                      baggage safely.
-                    </span>
-                  </div>
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold" }}>
-                      Computer Systems for Travel:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Understand how computer systems manage reservations,
-                      flight departures, and other processes.
-                    </span>
-                  </div>
-                </li>
-                <li className="ms-lg-4 d-flex align-items-start mt-1">
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  <div>
-                    <span style={{ fontWeight: "bold" }}>
-                      Latest Passenger Service Technology:
-                    </span>{" "}
-                    <span className="d-block d-sm-inline">
-                      Stay updated on the newest technology used to provide
-                      services at the airports and on flights.
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-12 col-md-12 col-lg-5 rounded-3 mt-5 mt-lg-4 rounded-3 shadow ms-lg-4 p-4">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Course </span>
-                <span className="fw-bold fs-3 text-primary">Content</span>
-              </p>
-
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-3 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  Introduction to Airport and Airline Ground Operations
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Computer Reservations and Departure Control System Functions
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Check-In Procedures for Passengers and their Baggage (Airport
-                  and Off-site)
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Conditions of Carriage, Boarding Procedures and Close-Out
-                  Messaging{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Dangerous Goods Regulations{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Managing Passenger Interactions{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Aviation Security Requirements for Passenger and Baggage{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Enhanced passenger facilitation{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Future of the Aviation Industry{" "}
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            className={`row mt-3 rounded-4 slide-in-left  ${
-              hasViewedSlide.thirdElement ? "animate-enquire" : ""
+            className={`row shadow rounded-4   slide-in-left  ${
+              hasViewedSlide.thirdElement ? "animate-slide-in" : ""
             }`}
             ref={myRef3}
-            style={{ justifyContent: "center" }}
           >
-            {" "}
-            <div className="col-12 col-md-12 col-lg-5 rounded-3 mt-3  rounded-3 shadow  p-4">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Career </span>
-                <span className="fw-bold fs-3 text-primary">Opportunities</span>
-              </p>
-
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-3 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  Airport Manager
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Aviation Trainer
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Customs and Immigration Officer
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Ground Handling Coordinator{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Passenger Service Agent{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Baggage Handler{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Airline Customer Service Representative{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Aircraft Dispatcher{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Airport Safety Officer{" "}
-                </li>
-              </ul>
+            <div className="col-12 col-lg-6 col-xl-6 hover-scale2 text-center mt-3 mb-3 mt-lg-3 mt-xl-3 mt-xxl-3 ">
+              <img
+                src={CILT5Image}
+                alt="CILT-Level 5"
+                className="img-fluid rounded-3 mt-lg-0 mt-xl-0 mt-xxl-0 m-auto"
+              />
             </div>
-            <div className="col-12 col-md-12 col-lg-5 rounded-3 mt-3 rounded-3 shadow ms-lg-4 p-4">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Entry </span>
-                <span className="fw-bold fs-3 text-primary">Qualification</span>
-              </p>
-              <p className="ms-3">
-                This course is suitable for individuals with the following
-                qualifications:
-              </p>
+
+            <div className="col-12 col-lg-6 col-xl-6 col-xxl-5 mt-2 mt-lg-5 mt-xl-3 mt-xxl-5 ms-xxl-2 border border-white mb-3">
+              <h2 className="text-center mt-lg-4 mt-xl-5 mt-xxl-5 ">
+                <span className="fw-bold  mt-lg-1 ">CILT </span>
+                <span className="fw-bold  text-primary">Level 5</span>
+              </h2>
               <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-3 d-flex align-items-start mt-1">
+                <li className="mt-1 d-flex align-items-start ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Grade 10 / O-Level / Class 10
+                  The CILT Level 5 - International Diploma in Logistics and
+                  Transport at WingsWay Training Institute is ideal for logistic
+                  professionals seeking career growth and higher income.
                 </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
+                <li className="mt-1 d-flex align-items-start ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
+                    className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  High school graduates
+                  This module covers everything from sea, air, road, and rail
+                  transport planning, warehousing, international business,
+                  strategies, and much more.
                 </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
+                <li className="d-flex align-items-start mt-1">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
+                    className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Undergraduates
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Postgraduates{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Working professionals{" "}
+                  Ideal for logistics professionals, this program is equivalent
+                  to two years of a degree course.
                 </li>
               </ul>
+              <div className="text-center">
+                <Button
+                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  style={{ background: "#0d278e" }}
+                  onClick={() => {
+                    window.location.href = "#"; // Simulate href="#" behavior
+                  }}
+                >
+                  Enquire Now
+                </Button>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className="container mt-5">
           <div
-            className={`row mt-3 rounded-4 slide-in-left  ${
+            className={`row shadow rounded-4  slide-in-left  ${
               hasViewedSlide.fourthElement ? "animate-enquire" : ""
             }`}
             ref={myRef4}
-            style={{ justifyContent: "center" }}
           >
-            {" "}
-            <div className="col-12 col-md-12 col-lg-5 rounded-3 mt-3  rounded-3 shadow p-4">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Key </span>
-                <span className="fw-bold fs-3 text-primary">Topics</span>
-              </p>
-              <p className="ms-3">
-                Some key topics covered in the Passenger Ground Services course
-                at WingsWay Training Institute:
-              </p>
+            <div className="col-12 col-lg-6 col-xl-5 col-xxl-5 mt-2  mb-3 ms-lg-3 ms-xl-3 ms-xxl-5 mt-lg-4 mt-xl-4 mt-xxl-5 ps-xxl-4">
+              <h2 className="text-center mt-lg-2 mt-xl-5 mt-xxl-5">
+                <span className="fw-bold  ">CILT </span>
+                <span className="fw-bold  text-primary">Level 6</span>
+              </h2>
               <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-3 d-flex align-items-start mt-1">
+                <li className="mt-1 d-flex align-items-start ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  How airports function
+                  The CILT- Level 6 - International Advance Diploma in Logistics
+                  and Transport helps logistics and transport professionals
+                  bridge the gap between a Level 5 Professional Diploma and a
+                  Master’s degree.
                 </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Guidelines for boarding passengers and baggage
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Dangerous Goods Regulations
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Interacting with passengers{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  The future of the aviation industry{" "}
-                </li>
-              </ul>
-            </div>
-            <div className="col-12 col-md-12 col-lg-5 rounded-3 mt-3 rounded-3 shadow ms-lg-4 p-4">
-              <p className="text-center mt-lg-3">
-                <span className="fw-bold fs-3 ">Learner’s </span>
-                <span className="fw-bold fs-3 text-primary">Profile</span>
-              </p>
-
-              <ul style={{ listStyleType: "none", paddingLeft: 0 }}>
-                <li className="ms-lg-3 d-flex align-items-start mt-1">
+                <li className="mt-1 d-flex align-items-start ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Airline passenger service employees
+                  This course equips you with the strategic management skills
+                  and tactical insights crucial for professional and business
+                  development.
                 </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
+                <li className="d-flex align-items-start mt-1">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
+                    className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Ground handling agents
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Airport operator’s employees
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Anyone wanting to kickstart a career in Passenger Ground
-                  Services and gain global exposure.{" "}
-                </li>
-                <li className="ms-lg-2 d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 ms-lg-2 flex-shrink-0 mt-1"
-                  />
-                  Customer service professionals{" "}
+                  At WingsWay, we’re committed to your success. Benefit from
+                  intensive exam preparation, scholarships, interest-free EMI
+                  options, internships, and unwavering support throughout your
+                  journey.
                 </li>
               </ul>
+              <div className="text-center">
+                <Button
+                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  style={{ background: "#0d278e" }}
+                  onClick={() => {
+                    window.location.href = "#"; // Simulate href="#" behavior
+                  }}
+                >
+                  Enquire Now
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="text-center mt-5 col-12 m-auto">
-            {/* <Button
-              className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
-              style={{ background: "#0d278e" }}
-              onClick={() => {
-                window.location.href = "#"; // Simulate href="#" behavior
-              }}
-            >
-              Enquire Now
-            </Button> */}
-
-            <button
-              type="button"
-              className="btn btn-lg text-center text-white Contactbutton mb-2 mb-lg-0"
-              onClick={() => {
-                window.location.href = "#"; // Simulate href="#" behavior
-              }}
-            >
-              Enquire Now
-            </button>
+            <div className="col-12 col-lg-5 col-xl-6 col-xxl-6 hover-scale2 text-center mt-3 mb-3 mt-lg-3  mt-xl-3 mt-xxl-3 ">
+              <img
+                src={CILT6Image}
+                alt="CILT-Level 6"
+                className="img-fluid rounded-3 mt-lg-0 mt-xl-0 mt-xxl-0 m-auto"
+              />
+            </div>
           </div>
         </div>
 
@@ -1235,11 +944,7 @@ export default function Home() {
           <div className="row border-primary ">
             <div className="col-12 text-center mb-4">
               <h1 className="fw-bold">
-                <span className="fw-bold  ">Hear From Our Happy </span>
-                <span className="fw-bold " style={{ color: "#022E88" }}>
-                  {" "}
-                  Students
-                </span>
+                <span className="fw-bold  ">Testimonials</span>
               </h1>
             </div>
           </div>
@@ -1249,101 +954,77 @@ export default function Home() {
             className="m-0 p-0 col-12 col-md-8 col-lg-8 m-auto"
           >
             <div>
-              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-4 mt-2 ms-2 testimonialresponsive-div">
-                <h3 className="text-center mt-5">Harriet Nakazibwe </h3>
+              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div">
+                <h3 className="text-center mt-5">Juliet D </h3>
                 <p className=" mt-3 text-center">
-                  I greatly recommend WingsWay as the best institute for
-                  ones’career buildup.It has been a great experience studying at
-                  WingsWay Institute during the pursuing of my IATA PGSA
-                  course.All thankful and grateful of my trainers,Ma’am Sheeran
-                  and Ma’am Tina in this journey of building my career.
+                  I have completed my CILT diploma with Wingsway Dubai I must
+                  say it’s the best decision I took as this gave lot of
+                  opportunity to learn & explore more and Mr Naveen sir has been
+                  so helping and he ensured that we understood well.
                 </p>
               </div>
             </div>
             <div>
-              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-5">Prateek Pandey</h4>
+              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div">
+                <h4 className="text-center mt-5">Sidonie la Fleur</h4>
                 <p className="text-center">
-                  I had completed my PGSA course with them last year, it was a
-                  very comprehensive and useful course and total value for money
-                  ! Special thanks to Sheetal ma’am, Tina maam, Queena ma’am and
-                  Cyril sir . I also got a job offer from DNATA within 3 months
-                  of completing the IATA exam. Interview preparation was also
-                  assisted by my trainers and no extra money was charged for on
-                  the phone advises and free complimentary sessions from time to
-                  time . The best place for aviation training! WingsWay !
+                  Learning experience was good. Specially the trainer Mr. Naveen
+                  teaching methods are excellent. I recommend Wings way training
+                  for procurement professional courses. Thank you.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 ms-2 mt-2 tesreview ">
-                <h4 className="text-center mt-5">Salman Ahmad</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div ">
+                <h4 className="text-center mt-5">Manish Poojary </h4>
                 <p className="text-center">
-                  The Wingsway Institute was an incredible experience for me. I
-                  had the opportunity to visit their facility and see aircraft
-                  up close.
-                </p>
-                <p className="text-center">
-                  Miss Tina Dey was an exceptional trainer who had a passion for
-                  aviation that was truly infectious. Her patience and
-                  dedication to her students were evident in every lesson she
-                  taught. I learned so much from her and felt confident in my
-                  abilities after training with her. Overall, my experience at
-                  the Wingsway Institute was top-notch. The combination of
-                  excellent facilities, experienced instructors, and
-                  top-of-the-line aircraft made for a truly unforgettable
-                  experience. I would highly recommend this institute to anyone
-                  looking to pursue a career in aviation.
+                  It was such an amazing training! The Trainer Mr. Naveen was so
+                  professional and his teaching helped me a lot to know about
+                  much more things technically. I highly recommend to join
+                  WingsWay institute.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-4 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-5">Mohammed Anwar</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-2 ms-xl-3 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-5">Hanadi Ghannam</h4>
                 <p className="text-center">
-                  I completed the Passenger Ground Service course at WingsWay
-                  Training Institute in Dubai and had a great experience. The
-                  instructors were knowledgeable, and the curriculum was
-                  practical, covering everything I needed to know for the
-                  industry. The staff were also helpful and supportive
-                  throughout the process. I highly recommend this institute for
-                  anyone looking to enter aviation or related fields.
+                  I highly recommend learning through this institute to update
+                  your knowledge. From day one up till now Mr. Junaid and the
+                  team were very responsive. Least but not last I can't miss Dr.
+                  Manish's way of teaching.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5 mt-5">Prashnaa Magar</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mb-1 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-md-5 mt-5">Touqeer ul-haq</h4>
                 <p className="text-center">
                   {" "}
-                  I had an amazing experience at wingsway training institute.
-                  The instructors were highly knowledgeable and passionate about
-                  their subjects, making learning both engaging and rewarding.
-                  Ms.Tina was so sweet and supportive.The curriculum at wingsway
-                  training institute is well-designed and comprehensive,
-                  covering all the necessary topics and providing practical
-                  skills.Overall, my time at wingsway training institute
-                  exceeded my expectations, and I would highly recommend it to
-                  anyone looking for a best Cabin Crew Courses, PGSA courses and
-                  a supportive learning environment.
+                  Attending this institute has been an incredible experience.
+                  The environment is both welcoming and motivating, which makes
+                  learning enjoyable. Mr. Naveen stands out as an exceptional
+                  teacher. His ability to clarify complex concepts and his
+                  passion for the subject truly inspire me. He is always
+                  approachable and goes the extra mile to ensure we understand
+                  the material. Thanks to his guidance, I feel much more
+                  confident in my abilities. I am grateful to be part of this
+                  learning community!
                 </p>
               </div>
             </div>
 
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5  mt-5">Wanu</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mb-1 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-md-5 mt-5">Sameer</h4>
 
                 <p className="text-center">
                   {" "}
-                  "Did my PGSA course from wings way and the amount of love and
-                  support I got from miss Tina, miss sheetal and the entire team
-                  of wings way was out of the world. They helped me with each
-                  and everything. I also had the opportunity to visit fujarah
-                  aviation academy where we did our aircraft visit and learnt
-                  how to become a ATC controller, a pilot as well as an AME. We
-                  got a tour of the hanger as well. Blessed to have such great
-                  trainers who are so dedicated towards building our future ❤️"
+                  I recently completed a course at Wingway Training Institute,
+                  and I am thoroughly impressed with the entire experience. From
+                  start to finish, the institute has demonstrated a high level
+                  of professionalism and dedication to providing quality
+                  education.
                 </p>
               </div>
             </div>
@@ -1384,22 +1065,29 @@ export default function Home() {
             </div>
 
             <div className="col-12 col-md-12 col-lg-2 text-center mt-lg-2 text-lg-center ">
-              <a href="#coursediscription" className="footer-link">
-                <span>Course Description</span>
+              <a href="#Aboutcilt" className="footer-link">
+                <span>About CILT</span>
               </a>
             </div>
 
             <div className="col-12 col-md-12 col-lg-2 mt-3 mt-md-3 text-center mt-lg-2 text-lg-center ">
-              <a href="#banner" className="footer-link">
-                <span>About the course</span>
+              <a href="#Aboutcilt" className="footer-link">
+                <span>Contact Us</span>
               </a>
             </div>
 
             <div className="col-12 col-md-12 col-lg-2 mt-3 mt-md-3 text-center mt-lg-2 text-lg-center">
               <a href="#Testimonials" className="footer-link">
-                <span>Testimonial</span>
+                <span>Testimonials</span>
               </a>
             </div>
+
+            <div className="col-12 col-md-12 col-lg-2 mt-3 mt-md-3 text-center mt-lg-2 text-lg-center">
+              <a href="#ourcourses" className="footer-link">
+                <span>Our Courses</span>
+              </a>
+            </div>
+
             <div
               className="row "
               style={{ backgroundColor: "#0a142f", color: "white" }}
