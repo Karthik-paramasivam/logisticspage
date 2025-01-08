@@ -721,7 +721,7 @@ export default function Home() {
               </ul>
               <div className="text-center">
                 <Button
-                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  className="mt-2 text-center text-white Enquirebutton mb-2 mb-lg-0"
                   style={{ background: "#0d278e" }}
                   onClick={() => {
                     window.location.href = "#"; // Simulate href="#" behavior
@@ -780,7 +780,7 @@ export default function Home() {
               </ul>
               <div className="text-center">
                 <Button
-                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  className="mt-2 text-center text-white Enquirebutton mb-2 mb-lg-0"
                   style={{ background: "#0d278e" }}
                   onClick={() => {
                     window.location.href = "#"; // Simulate href="#" behavior
@@ -853,7 +853,7 @@ export default function Home() {
               </ul>
               <div className="text-center">
                 <Button
-                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  className="mt-2 text-center text-white Enquirebutton mb-2 mb-lg-0"
                   style={{ background: "#0d278e" }}
                   onClick={() => {
                     window.location.href = "#"; // Simulate href="#" behavior
@@ -914,7 +914,7 @@ export default function Home() {
               </ul>
               <div className="text-center">
                 <Button
-                  className="mt-2 text-center text-white Contactbutton mb-2 mb-lg-0"
+                  className="mt-2 text-center text-white Enquirebutton mb-2 mb-lg-0"
                   style={{ background: "#0d278e" }}
                   onClick={() => {
                     window.location.href = "#"; // Simulate href="#" behavior

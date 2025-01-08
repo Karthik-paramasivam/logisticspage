@@ -109,6 +109,21 @@ button.Contactbutton:hover {
   border: 1px solid #F3BC44
 }
 
+.Enquirebutton {
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  color: white !important;
+  background-color: #F46A2F !important;
+  border: 1px solid #F46A2F !important;
+  /* padding: 20px !important; */
+
+}
+
+button.Enquirebutton:hover {
+  background-color: white !important;
+  color: #F46A2F!important;
+  border: 1px solid #F46A2F
+}
+
 .Submitbutton {
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
   color: white !important;
