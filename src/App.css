@@ -219,13 +219,13 @@ html {
 
 .testimonialresponsive-div {
   width: 95%;
-  height: 420px; /* Default height for large devices */
+  height: 310px; /* Default height for large devices */
 }
 
 @media (max-width: 1024px) {
   /* For medium devices */
   .testimonialresponsive-div {
-    height: 530px;
+    height: 355px;
   }
 }
 

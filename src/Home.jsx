@@ -141,7 +141,7 @@ export default function Home() {
   const handleSubmit = (values) => {
     // Log the values during the first submission, formData will be null initially
     // console.log(values);
-    // setFormData(values); // Set form data after submission
+    setFormData(values); // Set form data after submission
     message.success("Form submitted successfully!");
     setPhoneNumber(""); // Reset phone number field
     form.resetFields(); // Reset all fields
@@ -273,9 +273,9 @@ export default function Home() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
     cssEase: "linear",
     autoplaySpeed: 4000,
     // initialSlide: 0,
@@ -284,8 +284,8 @@ export default function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
           speed: 300,
@@ -576,12 +576,7 @@ export default function Home() {
                           className="text-primary me-2 flex-shrink-0 mt-1"
                         />
                         <span>
-                          The Chartered Institute of Logistics and Transport
-                          (CILT, UK) stands as the global leader in advocating
-                          for supply chain, logistics, and transport. CILT is
-                          dedicated to crafting effective programs and setting
-                          ambitious objectives that form the cornerstone of its
-                          growth strategy, rooted in regional development.
+                        The Chartered Institute of Logistics and Transport (CILT, UK) stands as the global leader in advocating for supply chain, logistics, and transport and setting global standards. CILT is dedicated to crafting effective programmes and setting ambitious objectives for supply chain logistics, and transport that form the cornerstone of its growth strategy.
                         </span>{" "}
                       </motion.li>
                       <motion.li
@@ -595,10 +590,7 @@ export default function Home() {
                           className="text-primary me-2 flex-shrink-0 mt-1"
                         />
                         <span>
-                          The institute’s unwavering commitment lies in the
-                          constant enhancement of its members’ expertise by
-                          fostering the exchange of best practices and knowledge
-                          sharing.
+                        The institute’s unwavering commitment lies in the constant enhancement of its members’ expertise by fostering the exchange of best practices and knowledge-sharing.
                         </span>{" "}
                       </motion.li>
                       <motion.li
@@ -611,9 +603,7 @@ export default function Home() {
                           icon={faCircleCheck}
                           className="text-primary me-2 flex-shrink-0 mt-1"
                         />
-                        Moreover, it actively promotes participation and
-                        professional advancement across all tiers of its
-                        membership.
+                  Moreover, it actively promotes participation and professional advancement across all tiers of its membership.
                       </motion.li>
                     </motion.ul>
                   </div>
@@ -672,8 +662,8 @@ export default function Home() {
               />
             </div>
 
-            <div className="col-12 col-lg-6 col-xl-6 col-xxl-5 mt-2 ms-xxl-2 border border-white mb-3">
-              <h2 className="text-center mt-lg-2 mt-xl-3">
+            <div className="col-12 col-lg-6 col-xl-6 col-xxl-5 mt-2 mt-lg-4 mt-xl-4 mt-xxl-5  ms-xxl-2 border border-white mb-3">
+              <h2 className="text-center mt-lg-2 mt-xl-5 mt-xxl-5">
                 <span className="fw-bold  ">CILT </span>
                 <span className="fw-bold  text-primary">Level 2</span>
               </h2>
@@ -684,21 +674,16 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  The CILT Level 2 Introductory Certificate course offered by
-                  the Chartered Institute of Logistics and Transport (CILT, UK)
-                  is the ideal choice for anyone looking to start their career
-                  in the Logistics industry, catering to both frontline and
-                  supervisory staff.
+                 The CILT Level 2 Introductory Certificate course is the ideal choice for anyone looking to start their career in the Logistics industry, catering to both frontline and supervisory staff. CILT enjoys global recognition as an authority in Logistics and Transport.
                 </li>
-                <li className="mt-1 d-flex align-items-start ">
+                {/* <li className="mt-1 d-flex align-items-start ">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  CILT enjoys global recognition as an authority in logistics
-                  and transport.
-                </li>
+                  The course covers essential topics, including logistics, transport operations, and industry principles.
+                </li> */}
                 <li className="d-flex align-items-start mt-1">
                   {" "}
                   <FontAwesomeIcon
@@ -717,25 +702,21 @@ export default function Home() {
                   The course covers essential topics, including logistics,
                   transport operations, and industry principles.
                 </li>
-                <li className="d-flex align-items-start mt-1">
-                  {" "}
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="text-primary me-2 flex-shrink-0 mt-1"
-                  />
-                  Apart from course training, WingsWay Training Institute
-                  provides thorough exam preparation support for this course as
-                  well.
-                </li>
+                
                 <li className="d-flex align-items-start mt-1">
                   {" "}
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     className="text-primary me-2  flex-shrink-0 mt-1"
                   />
-                  Additionally, we offer a range of benefits, such as
-                  scholarships, interest-free EMI options, and internship
-                  opportunities.
+                  <div>
+                    <span style={{ fontWeight: "bold" }}>
+                    Course Duration -
+                    </span>{" "}
+                    <span >
+                    160 hours
+                    </span>
+                  </div>
                 </li>
               </ul>
               <div className="text-center">
@@ -772,9 +753,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  This entry-level course has been thoughtfully tailored by our
-                  expert trainers to align with local market demands while
-                  developing crucial logistics and supply chain skills.
+                  This entry-level course has been thoughtfully tailored by our expert trainers to align with local market demands while developing crucial logistics and supply chain skills.
                 </li>
                 <li className="mt-1 d-flex align-items-start ">
                   {" "}
@@ -782,9 +761,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Our curriculum encompasses a global perspective, exploration
-                  of shipping routes, and relevant topics, all aimed at
-                  preparing you for international job opportunities.
+                Our curriculum encompasses a global perspective, exploration of shipping routes, and relevant topics, all aimed at preparing you for international job opportunities.
                 </li>
                 <li className="d-flex align-items-start mt-1">
                   {" "}
@@ -792,9 +769,22 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  At WingsWay, we go the extra mile, offering comprehensive exam
-                  preparation, scholarships, interest-free EMI options,
-                  internships, end-to-end support, and more
+                  At WingsWay, we go the extra mile, offering comprehensive exam preparation, scholarships, interest-free EMI options, internships, end-to-end support, and more.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2  flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <span style={{ fontWeight: "bold" }}>
+                    Course Duration -
+                    </span>{" "}
+                    <span >
+                    40 hours
+                    </span>
+                  </div>
                 </li>
               </ul>
               <div className="text-center">
@@ -846,9 +836,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  The CILT Level 5 - International Diploma in Logistics and
-                  Transport at WingsWay Training Institute is ideal for logistic
-                  professionals seeking career growth and higher income.
+                  The CILT Level 5 - International Diploma in Logistics and Transport at WingsWay Training Institute is an advanced entry-level program ideal for logistic professionals seeking career growth and higher income.
                 </li>
                 <li className="mt-1 d-flex align-items-start ">
                   {" "}
@@ -856,9 +844,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  This module covers everything from sea, air, road, and rail
-                  transport planning, warehousing, international business,
-                  strategies, and much more.
+                  This course covers everything from sea, air, road, and rail transport planning, warehousing, international business, strategies, and much more.
                 </li>
                 <li className="d-flex align-items-start mt-1">
                   {" "}
@@ -866,8 +852,22 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  Ideal for logistics professionals, this program is equivalent
-                  to two years of a degree course.
+                  The Level 5 qualification is equivalent to two years of a degree program.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2  flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <span style={{ fontWeight: "bold" }}>
+                    Course Duration -
+                    </span>{" "}
+                    <span>
+                    70 hours
+                    </span>
+                  </div>
                 </li>
               </ul>
               <div className="text-center">
@@ -904,10 +904,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  The CILT- Level 6 - International Advance Diploma in Logistics
-                  and Transport helps logistics and transport professionals
-                  bridge the gap between a Level 5 Professional Diploma and a
-                  Master’s degree.
+                  The CILT - Level 6 International Advance Diploma in Logistics and Transport helps logistics and transport professionals bridge the gap between a Level 5 Professional Diploma and a master’s degree.
                 </li>
                 <li className="mt-1 d-flex align-items-start ">
                   {" "}
@@ -915,9 +912,7 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  This course equips you with the strategic management skills
-                  and tactical insights crucial for professional and business
-                  development.
+                  This course equips you with the strategic management skills and tactical insights crucial for professional and business development.
                 </li>
                 <li className="d-flex align-items-start mt-1">
                   {" "}
@@ -925,10 +920,22 @@ export default function Home() {
                     icon={faCircleCheck}
                     className="text-primary me-2 flex-shrink-0 mt-1"
                   />
-                  At WingsWay, we’re committed to your success. Benefit from
-                  intensive exam preparation, scholarships, interest-free EMI
-                  options, internships, and unwavering support throughout your
-                  journey.
+                With WingsWay, benefit from intensive exam preparation, scholarships, interest-free EMI options, internships, and unwavering support throughout your journey.
+                </li>
+                <li className="d-flex align-items-start mt-1">
+                  {" "}
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="text-primary me-2  flex-shrink-0 mt-1"
+                  />
+                  <div>
+                    <span style={{ fontWeight: "bold" }}>
+                    Course Duration -
+                    </span>{" "}
+                    <span >
+                    90 hours
+                    </span>
+                  </div>
                 </li>
               </ul>
               <div className="text-center">
@@ -973,77 +980,54 @@ export default function Home() {
             className="m-0 p-0 col-12 col-md-8 col-lg-8 m-auto"
           >
             <div>
-              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div">
-                <h3 className="text-center mt-5">Juliet D </h3>
+              <div className=" p-3 shadow-sm border border-2 border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mt-2 ms-2 testimonialresponsive-div">
+                <h3 className="text-center mt-5">Touqeer ul-haq</h3>
                 <p className=" mt-3 text-center">
-                  I have completed my CILT diploma with Wingsway Dubai I must
-                  say it’s the best decision I took as this gave lot of
-                  opportunity to learn & explore more and Mr Naveen sir has been
-                  so helping and he ensured that we understood well.
+                Attending this institute has been an incredible experience. The environment is both welcoming and motivating, which makes learning enjoyable. Mr. Naveen stands out as an exceptional teacher. His ability to clarify complex concepts and his passion for the subject truly inspire me. He is always approachable and goes the extra mile to ensure we understand the material. Thanks to his guidance, I feel much more confident in my abilities. I am grateful to be part of this learning community!.
                 </p>
               </div>
             </div>
             <div>
-              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div">
-                <h4 className="text-center mt-5">Sidonie la Fleur</h4>
+              <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-3 ms-xl-4 ms-xxl-4 mt-2 ms-2 testimonialresponsive-div">
+                <h4 className="text-center mt-5">Manish Poojary</h4>
                 <p className="text-center">
-                  Learning experience was good. Specially the trainer Mr. Naveen
-                  teaching methods are excellent. I recommend Wings way training
-                  for procurement professional courses. Thank you.
+                It was such an amazing training! The trainer, Mr. Naveen was so professional, and his teaching helped me a lot to know about much more things technically. I highly recommend joining WingsWay Training Institute.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mt-2 ms-2 testimonialresponsive-div ">
-                <h4 className="text-center mt-5">Manish Poojary </h4>
-                <p className="text-center">
-                  It was such an amazing training! The Trainer Mr. Naveen was so
-                  professional and his teaching helped me a lot to know about
-                  much more things technically. I highly recommend to join
-                  WingsWay institute.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-2 ms-xl-3 ms-2 mt-2 testimonialresponsive-div">
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mt-2 ms-2 testimonialresponsive-div ">
                 <h4 className="text-center mt-5">Hanadi Ghannam</h4>
                 <p className="text-center">
-                  I highly recommend learning through this institute to update
-                  your knowledge. From day one up till now Mr. Junaid and the
-                  team were very responsive. Least but not last I can't miss Dr.
-                  Manish's way of teaching.
+                I highly recommend learning through this institute to update your knowledge. From day one up till now Mr. Junaid and the team were very responsive. Least but not last, I can't miss Dr. Manish's way of teaching.
                 </p>
               </div>
             </div>
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5 mt-5">Touqeer ul-haq</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-3 ms-xl-4 ms-xxl-4 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-5">Sameer</h4>
+                <p className="text-center">
+                I recently completed a course at WingsWay Training Institute, and I am thoroughly impressed with the entire experience. From start to finish, the institute has demonstrated a high level of professionalism and dedication to providing quality education.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-md-5 mt-5">Juliet D </h4>
                 <p className="text-center">
                   {" "}
-                  Attending this institute has been an incredible experience.
-                  The environment is both welcoming and motivating, which makes
-                  learning enjoyable. Mr. Naveen stands out as an exceptional
-                  teacher. His ability to clarify complex concepts and his
-                  passion for the subject truly inspire me. He is always
-                  approachable and goes the extra mile to ensure we understand
-                  the material. Thanks to his guidance, I feel much more
-                  confident in my abilities. I am grateful to be part of this
-                  learning community!
+                  I have completed my CILT diploma with Wingsway Dubai. I must say it’s the best decision I took as this gave lot of opportunity to learn & explore more and Mr. Naveen sir has been so helping, and he ensured that we understood well.
                 </p>
               </div>
             </div>
 
             <div>
-              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-2 ms-xl-3 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5 mt-5">Sameer</h4>
+              <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
+                <h4 className="text-center mt-md-5 mt-5">Sidonie la Fleur</h4>
 
                 <p className="text-center">
                   {" "}
-                  I recently completed a course at Wingway Training Institute,
-                  and I am thoroughly impressed with the entire experience. From
-                  start to finish, the institute has demonstrated a high level
-                  of professionalism and dedication to providing quality
-                  education.
+                  Learning experience was good. Specially the trainer Mr. Naveen teaching methods are excellent. I recommend WingsWay Training Institute for procurement professional courses. Thank you.
                 </p>
               </div>
             </div>
