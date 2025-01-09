@@ -275,7 +275,7 @@ export default function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     cssEase: "linear",
     autoplaySpeed: 4000,
     // initialSlide: 0,
@@ -989,7 +989,7 @@ export default function Home() {
             </div>
             <div>
               <div className=" p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-3 ms-xl-4 ms-xxl-4 mt-2 ms-2 testimonialresponsive-div">
-                <h4 className="text-center mt-5">Manish Poojary</h4>
+                <h3 className="text-center mt-5">Manish Poojary</h3>
                 <p className="text-center">
                 It was such an amazing training! The trainer, Mr. Naveen was so professional, and his teaching helped me a lot to know about much more things technically. I highly recommend joining WingsWay Training Institute.
                 </p>
@@ -997,7 +997,7 @@ export default function Home() {
             </div>
             <div>
               <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mt-2 ms-2 testimonialresponsive-div ">
-                <h4 className="text-center mt-5">Hanadi Ghannam</h4>
+                <h3 className="text-center mt-5">Hanadi Ghannam</h3>
                 <p className="text-center">
                 I highly recommend learning through this institute to update your knowledge. From day one up till now Mr. Junaid and the team were very responsive. Least but not last, I can't miss Dr. Manish's way of teaching.
                 </p>
@@ -1005,7 +1005,7 @@ export default function Home() {
             </div>
             <div>
               <div className="p-3 shadow-sm border border-light rounded-3 ms-md-2 ms-lg-3 ms-xl-4 ms-xxl-4 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-5">Sameer</h4>
+                <h3 className="text-center mt-5">Sameer</h3>
                 <p className="text-center">
                 I recently completed a course at WingsWay Training Institute, and I am thoroughly impressed with the entire experience. From start to finish, the institute has demonstrated a high level of professionalism and dedication to providing quality education.
                 </p>
@@ -1013,7 +1013,7 @@ export default function Home() {
             </div>
             <div>
               <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5 mt-5">Juliet D </h4>
+                <h3 className="text-center mt-md-5 mt-5">Juliet D </h3>
                 <p className="text-center">
                   {" "}
                   I have completed my CILT diploma with Wingsway Dubai. I must say it’s the best decision I took as this gave lot of opportunity to learn & explore more and Mr. Naveen sir has been so helping, and he ensured that we understood well.
@@ -1023,7 +1023,7 @@ export default function Home() {
 
             <div>
               <div className="p-3 shadow-sm border border-light rounded-3 ms-lg-3 ms-xl-4 ms-xxl-4 mb-1 ms-2 mt-2 testimonialresponsive-div">
-                <h4 className="text-center mt-md-5 mt-5">Sidonie la Fleur</h4>
+                <h3 className="text-center mt-md-5 mt-5">Sidonie la Fleur</h3>
 
                 <p className="text-center">
                   {" "}
