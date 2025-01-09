@@ -545,7 +545,7 @@ export default function Home() {
                         </span>
                       </h1>{" "}
                     </motion.p>
-                    <motion.p
+                    {/* <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: hasViewed ? 1 : 0 }}
                       transition={{ delay: 0.7, duration: 1 }}
@@ -557,7 +557,7 @@ export default function Home() {
                       crafting effective programs and setting ambitious
                       objectives that form the cornerstone of its growth
                       strategy, rooted in regional development.
-                    </motion.p>
+                    </motion.p> */}
                     <motion.ul
                       initial={{ opacity: 0 }}
                       animate={{ opacity: hasViewed ? 1 : 0 }}
@@ -568,8 +568,27 @@ export default function Home() {
                       <motion.li
                         initial={{ opacity: 0 }}
                         animate={{ opacity: hasViewed ? 1 : 0 }}
-                        transition={{ delay: 0.8, duration: 0.5 }}
+                        transition={{ delay: 0.6, duration: 0.5 }}
                         className="d-flex align-items-start "
+                      >
+                        <FontAwesomeIcon
+                          icon={faCircleCheck}
+                          className="text-primary me-2 flex-shrink-0 mt-1"
+                        />
+                        <span>
+                          The Chartered Institute of Logistics and Transport
+                          (CILT, UK) stands as the global leader in advocating
+                          for supply chain, logistics, and transport. CILT is
+                          dedicated to crafting effective programs and setting
+                          ambitious objectives that form the cornerstone of its
+                          growth strategy, rooted in regional development.
+                        </span>{" "}
+                      </motion.li>
+                      <motion.li
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: hasViewed ? 1 : 0 }}
+                        transition={{ delay: 0.8, duration: 0.5 }}
+                        className="d-flex align-items-start mt-1"
                       >
                         <FontAwesomeIcon
                           icon={faCircleCheck}
