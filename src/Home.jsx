@@ -363,7 +363,7 @@ export default function Home() {
                     Discover Your
                     <br />
                     Potential in{" "}
-                    <span style={{ color: "rgb(243,188,68)" }}>Logistics</span>
+                    <span style={{ color: "#007dc0" }}>Logistics</span>
                   </h1>
                   <h3 className="text-white fw-light">
                     Uncover new career opportunities with logistics and
@@ -375,7 +375,8 @@ export default function Home() {
                 <motion.div
                   className="col-12 col-lg-6 col-xl-6 col-xxl-5 rounded-4 mt-3 m-auto mt-lg-1 mb-lg-1 "
                   style={{
-                    backgroundColor: "rgb(243, 188, 68)",
+                    // backgroundColor: "rgb(243, 188, 68)",
+                    backgroundColor: "#0721a4",
                     padding: "20px",
                   }}
                   initial={{ opacity: 0, y: 50 }}
@@ -499,9 +500,9 @@ export default function Home() {
                           htmlType="submit"
                           style={{
                             backgroundColor:
-                              "#0721a4" /* Ant Design warning color */,
+                              "#faad14" /* Ant Design warning color */,
                             color: "white",
-                            borderColor: "#0721a4",
+                            borderColor: "#faad14",
                           }}
                           className="Submitbutton"
                         >
@@ -540,7 +541,7 @@ export default function Home() {
                     >
                       <h1 className="text-start">
                         <span className="fw-bold  ">About </span>
-                        <span className="fw-bold" style={{ color: "#d59911" }}>
+                        <span className="fw-bold text-primary" >
                           CILT
                         </span>
                       </h1>{" "}
@@ -638,7 +639,7 @@ export default function Home() {
             <div className="col-12 ">
               <h1 className="text-center mt-lg-5">
                 <span className="fw-bold "> Our </span>
-                <span className="fw-bold" style={{ color: "#d59911" }}>
+                <span className="fw-bold text-primary" >
                   {" "}
                   Courses
                 </span>
@@ -719,7 +720,7 @@ export default function Home() {
                   </div>
                 </li>
               </ul>
-              <div className="text-center">
+              <div className="text-center ">
                 <Button
                   className="mt-2 text-center text-white Enquirebutton mb-2 mb-lg-0"
                   style={{ background: "#0d278e" }}

@@ -97,43 +97,43 @@
 .Contactbutton {
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
   color: white !important;
-  background-color: #F3BC44 !important;
-  border: 1px solid #F3BC44 !important;
+  background-color: #0d278e !important;
+  border: 1px solid #0d278e !important;
   /* padding: 20px !important; */
 
 }
 
 button.Contactbutton:hover {
   background-color: white !important;
-  color: #F3BC44 !important;
-  border: 1px solid #F3BC44
+  color: #007dc0 !important;
+  border: 1px solid #007dc0 !important;
 }
 
 .Enquirebutton {
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
   color: white !important;
-  background-color: #F46A2F !important;
-  border: 1px solid #F46A2F !important;
+  background-color: #0d278e !important;
+  border: 1px solid #0d278e !important;
   /* padding: 20px !important; */
 
 }
 
 button.Enquirebutton:hover {
   background-color: white !important;
-  color: #F46A2F!important;
-  border: 1px solid #F46A2F
+  color: #007dc0 !important;
+  border: 1px solid #007dc0 !important;
 }
 
 .Submitbutton {
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
   color: white !important;
-  background-color: #0721a4 !important;
-  border: 1px solid #0721a4 !important;
+  /* background-color: #0721a4 !important;
+  border: 1px solid #0721a4 !important; */
 }
 
 button.Submitbutton:hover {
   transform: scale(1.05); /* Slight enlargement on hover */
-  border: 1px solid #0721a4 !important;
+  /* border: 1px solid #0721a4 !important; */
 
 }
 .fixed-icon {
